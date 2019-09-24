@@ -1,1 +1,9 @@
-<p>toolbar works!</p>
+<div class="container">
+  <mat-form-field>
+    <input matInput placeholder="Enter a task name..." [(ngModel)]="searchCriterion" (keydown)="onKeydown($event)">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="handleClick()">
+    Search
+  </button>
+</div>
