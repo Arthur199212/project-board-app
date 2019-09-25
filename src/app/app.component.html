@@ -2,8 +2,7 @@
   <div class="content-wraper">
     <app-header></app-header>
     <app-toolbar (childEvent)="searchCriterion=$event" ></app-toolbar>
-    {{searchCriterion}}
-    <app-board></app-board>
+    <app-board [searchCriterion]="searchCriterion"></app-board>
     <app-footer></app-footer>
   </div>
 </div>
