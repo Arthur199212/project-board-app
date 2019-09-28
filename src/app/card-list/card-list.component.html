@@ -1,9 +1,7 @@
-<div>
-  <h3> {{ card.name }}</h3>
-  <app-card-item
-    [cardItem]="card.cards"
-    [isDone]="card.isDoneSection"
-    [query]="searchCriterion"
-  >
-</app-card-item>
-</div>
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{ card.name }}</mat-card-title>
+  </mat-card-header>
+  <app-card-item [cardItem]="card.cards" [isDone]="card.isDoneSection" [query]="searchCriterion">
+  </app-card-item>
+</mat-card>

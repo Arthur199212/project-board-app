@@ -1,6 +1,12 @@
-<div *ngFor="let card of cardItem | searchCriteria: query">
-  <h4 [ngClass]="{'done': isDone}">{{ card.name }}</h4>
-  <!-- <p>{{ card.description }}</p>
-  <p>{{ card.dueDate }}</p>
-  <p>{{ card.assignee.firstName + ' ' + card.assignee.lastName }}</p> -->
-</div>
+  <mat-accordion *ngFor="let card of cardItem | searchCriteria: query">
+    <mat-expansion-panel>
+      <mat-expansion-panel-header>
+        <mat-panel-title [ngClass]="{'done': isDone}">
+          {{ card.name }}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <p>{{ card.description }}</p>
+      <p>{{ card.dueDate }}</p>
+      <p>{{ card.assignee.firstName + ' ' + card.assignee.lastName }}</p>
+    </mat-expansion-panel>
+  </mat-accordion>
