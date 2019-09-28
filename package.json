@@ -4,7 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --prod --base-href https://Arthur199212.github.io/project-board-app/",
+    "publish": "ngh --dir=dist/project-board-app",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
