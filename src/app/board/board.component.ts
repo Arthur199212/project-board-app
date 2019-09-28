@@ -10,18 +10,68 @@ export class BoardComponent implements OnInit {
     {
       id: "1",
       name: "Backlog",
-      cards: []
+      cards: [
+        {
+          id: '1',
+          name: 'Task 1',
+          description: 'Description',
+          dueDate: 'Date',
+          assignee: {
+            id: '01',
+            firstName: 'Sam',
+            lastName: "Smith"
+          }
+        },
+        {
+          id: '5',
+          name: 'Task 5',
+          description: 'Description',
+          dueDate: 'Date',
+          assignee: {
+            id: '01',
+            firstName: 'Sam',
+            lastName: "Smith"
+          }
+        }
+      ],
+      isDoneSection: false,
     },
     {
       id: "2",
       name: "In progress",
-      cards: []
+      cards: [
+        {
+          id: '2',
+          name: 'Task 2',
+          description: 'Description',
+          dueDate: 'Date',
+          assignee: {
+            id: '02',
+            firstName: 'Stam',
+            lastName: "Smith"
+          }
+        }
+      ],
+      isDoneSection: false,
     },
     {
       id: "3",
       name: "Done",
-      cards: []
-    }
+      cards: [
+        {
+          id: '3',
+          name: 'Task 3',
+          description: 'Description',
+          dueDate: 'Date',
+          assignee: {
+            id: '03',
+            firstName: 'Solomon',
+            lastName: "Smith"
+          }
+        }
+      ],
+      isDoneSection: true,
+    },
   ];
 
   @Input() public searchCriterion;

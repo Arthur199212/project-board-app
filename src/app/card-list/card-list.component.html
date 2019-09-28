@@ -1,1 +1,9 @@
-<app-card-item></app-card-item>
+<div>
+  <h3> {{ card.name }}</h3>
+  <app-card-item
+    [cardItem]="card.cards"
+    [isDone]="card.isDoneSection"
+    [query]="searchCriterion"
+  >
+</app-card-item>
+</div>

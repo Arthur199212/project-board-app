@@ -1,1 +1,6 @@
-<p>card-item works!</p>
+<div *ngFor="let card of cardItem | searchCriteria: query">
+  <h4 [ngClass]="{'done': isDone}">{{ card.name }}</h4>
+  <!-- <p>{{ card.description }}</p>
+  <p>{{ card.dueDate }}</p>
+  <p>{{ card.assignee.firstName + ' ' + card.assignee.lastName }}</p> -->
+</div>

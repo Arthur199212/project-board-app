@@ -4,4 +4,5 @@ export interface CardList {
   id: string;
   name: string;
   cards: Card[];
+  isDoneSection: boolean;
 }

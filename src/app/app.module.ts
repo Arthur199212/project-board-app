@@ -15,6 +15,7 @@ import { BoardComponent } from './board/board.component';
 import { CardListComponent } from './card-list/card-list.component';
 import { CardItemComponent } from './card-item/card-item.component';
 import { FooterComponent } from './footer/footer.component';
+import { SearchCriteriaPipe } from './pipes/search-criteria.pipe';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FooterComponent } from './footer/footer.component';
     BoardComponent,
     CardListComponent,
     CardItemComponent,
-    FooterComponent
+    FooterComponent,
+    SearchCriteriaPipe
   ],
   imports: [
     FormsModule,

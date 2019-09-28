@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from "@angular/core";
+import { CardList } from '../models/CardList';
+import { Card } from '../models/Card';
 
 @Component({
-  selector: 'app-card-list',
-  templateUrl: './card-list.component.html',
-  styleUrls: ['./card-list.component.scss']
+  selector: "app-card-list",
+  templateUrl: "./card-list.component.html",
+  styleUrls: ["./card-list.component.scss"]
 })
 export class CardListComponent implements OnInit {
+  @Input() public card;
 
-  constructor() { }
+  @Input() public searchCriterion: string;
 
-  ngOnInit() {
-  }
+  @Output() removeCard = new EventEmitter<Card>();
 
+  constructor() {}
+
+  ngOnInit() {}
 }
