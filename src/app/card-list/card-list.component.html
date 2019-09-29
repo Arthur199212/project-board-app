@@ -2,6 +2,7 @@
   <mat-card-header>
     <mat-card-title>{{ card.name }}</mat-card-title>
   </mat-card-header>
-  <app-card-item [cardItem]="card.cards" [isDone]="card.isDoneSection" [query]="searchCriterion">
+  <app-card-item [cardItem]="card.cards" [isDone]="card.isDoneSection" [query]="searchCriterion"
+    (removeCard)="handleRemove($event)">
   </app-card-item>
 </mat-card>

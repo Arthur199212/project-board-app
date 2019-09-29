@@ -15,7 +15,7 @@ export class BoardComponent implements OnInit {
           id: '1',
           name: 'Task 1',
           description: 'Description',
-          dueDate: 'Date',
+          dueDate: 'Sun Sep 29 2019 09:43:22 GMT+0200 (Восточная Европа, стандартное время)',
           assignee: {
             id: '01',
             firstName: 'Sam',
@@ -26,7 +26,7 @@ export class BoardComponent implements OnInit {
           id: '5',
           name: 'Task 5',
           description: 'Description',
-          dueDate: 'Date',
+          dueDate: 'Sun Sep 29 2019 14:43:22 GMT+0200 (Восточная Европа, стандартное время)',
           assignee: {
             id: '01',
             firstName: 'Sam',
@@ -44,7 +44,7 @@ export class BoardComponent implements OnInit {
           id: '2',
           name: 'Task 2',
           description: 'Description',
-          dueDate: 'Date',
+          dueDate: 'Sun Sep 29 2019 16:43:22 GMT+0200 (Восточная Европа, стандартное время)',
           assignee: {
             id: '02',
             firstName: 'Stam',
@@ -62,7 +62,7 @@ export class BoardComponent implements OnInit {
           id: '3',
           name: 'Task 3',
           description: 'Description',
-          dueDate: 'Date',
+          dueDate: 'Sun Sep 29 2019 07:43:22 GMT+0200 (Восточная Европа, стандартное время)',
           assignee: {
             id: '03',
             firstName: 'Solomon',
@@ -80,7 +80,9 @@ export class BoardComponent implements OnInit {
 
   ngOnInit() {}
 
-  removeCard({ cardId }) {
-    this.cardList = this.cardList.filter(({ id }) => id !== cardId);
+  handleRemove({ id: cardId }) {
+    this.cardList.forEach(card => {
+      card.cards = card.cards.filter(({ id }) => id !== cardId);
+    })
   }
 }

@@ -3,7 +3,7 @@
     *ngFor="let card of cardList"
     [card]="card"
     [searchCriterion]="searchCriterion"
-    (removeCard)="removeCard($event)"
+    (removeCard)="handleRemove($event)"
   >
   </app-card-list>
 </div>

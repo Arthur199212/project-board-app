@@ -12,9 +12,13 @@ export class CardListComponent implements OnInit {
 
   @Input() public searchCriterion: string;
 
-  @Output() removeCard = new EventEmitter<Card>();
+  @Output() public removeCard = new EventEmitter();
 
   constructor() {}
 
   ngOnInit() {}
+
+  handleRemove($event) {
+    this.removeCard.emit($event);
+  }
 }

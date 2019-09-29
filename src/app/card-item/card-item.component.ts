@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { SearchCriteriaPipe } from '../pipes/search-criteria.pipe';
+import { Card } from '../models/Card';
 
 @Component({
   selector: 'app-card-item',
@@ -14,9 +15,15 @@ export class CardItemComponent implements OnInit {
 
   @Input() public isDone: boolean;
 
+  @Output() public removeCard = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  handleRemove(card) {
+    this.removeCard.emit(card);
   }
 
 }
