@@ -15,7 +15,7 @@ export class BoardComponent implements OnInit {
           id: '1',
           name: 'Task 1',
           description: 'Description',
-          dueDate: 'Sun Sep 29 2019 09:43:22 GMT+0200 (Восточная Европа, стандартное время)',
+          dueDate: 'Wed Dec 04 2019 00:00:00 GMT+0200 (Восточная Европа, стандартное время)',
           assignee: {
             id: '01',
             firstName: 'Sam',
@@ -44,11 +44,22 @@ export class BoardComponent implements OnInit {
           id: '2',
           name: 'Task 2',
           description: 'Description',
-          dueDate: 'Sun Sep 29 2019 16:43:22 GMT+0200 (Восточная Европа, стандартное время)',
+          dueDate: 'Tue Oct 01 2019 00:00:00 GMT+0200 (Восточная Европа, стандартное время)',
           assignee: {
             id: '02',
             firstName: 'Stam',
             lastName: "Smith"
+          }
+        },
+        {
+          id: '4',
+          name: 'Task 4',
+          description: 'Description',
+          dueDate: 'Sun Oct 06 2019 00:00:00 GMT+0200 (Восточная Европа, стандартное время)',
+          assignee: {
+            id: '04',
+            firstName: 'Markus',
+            lastName: "N"
           }
         }
       ],

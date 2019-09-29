@@ -1,5 +1,5 @@
 <mat-accordion *ngFor="let card of cardItem | searchCriteria: query">
-  <mat-expansion-panel>
+  <mat-expansion-panel *ngIf="!isDone" appUrgency [date]="card.dueDate"> <!-- conditional rendering -->
     <mat-expansion-panel-header>
       <mat-panel-title [ngClass]="{'done': isDone}">
         {{ card.name }}
@@ -15,4 +15,21 @@
       <button mat-button color="warn" (click)="handleRemove(card)">Remove</button>
     </mat-card-actions>
   </mat-expansion-panel>
+
+  <mat-expansion-panel *ngIf="isDone"> <!-- conditional rendering -->
+      <mat-expansion-panel-header>
+        <mat-panel-title [ngClass]="{'done': isDone}">
+          {{ card.name }}
+        </mat-panel-title>
+
+      </mat-expansion-panel-header>
+      <p>{{ card.description }}</p>
+      <p>{{ card.dueDate | date: 'dd/MM/yyyy' }}</p>
+      <p>{{ card.assignee.firstName + ' ' + card.assignee.lastName }}</p>
+
+      <mat-card-actions>
+        <button mat-button color="primary">Edit</button>
+        <button mat-button color="warn" (click)="handleRemove(card)">Remove</button>
+      </mat-card-actions>
+    </mat-expansion-panel>
 </mat-accordion>

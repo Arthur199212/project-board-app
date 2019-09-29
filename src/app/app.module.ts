@@ -18,6 +18,7 @@ import { CardListComponent } from './card-list/card-list.component';
 import { CardItemComponent } from './card-item/card-item.component';
 import { FooterComponent } from './footer/footer.component';
 import { SearchCriteriaPipe } from './pipes/search-criteria.pipe';
+import { UrgencyDirective } from './directives/urgency.directive';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { SearchCriteriaPipe } from './pipes/search-criteria.pipe';
     CardListComponent,
     CardItemComponent,
     FooterComponent,
-    SearchCriteriaPipe
+    SearchCriteriaPipe,
+    UrgencyDirective
   ],
   imports: [
     FormsModule,
