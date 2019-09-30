@@ -25,8 +25,6 @@ export class CardListComponent implements OnInit {
   }
 
   handleAddCard() {
-    console.log('hey')
-
     this.addCard.emit(this.card);
   }
 }
