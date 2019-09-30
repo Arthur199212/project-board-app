@@ -96,4 +96,26 @@ export class BoardComponent implements OnInit {
       card.cards = card.cards.filter(({ id }) => id !== cardId);
     })
   }
+
+  handleAddCard({ id }) {
+    this.cardList.forEach(card => {
+      if (card.id === id) {
+        card.cards = [...card.cards, {
+          id: this.createUniqueId(),
+          name: 'NewTask (Test)',
+          description: 'Description',
+          dueDate: String(new Date('12/12/2019')),
+          assignee: {
+            id: this.createUniqueId(),
+            firstName: 'Solomon',
+            lastName: "Smith"
+          }
+        }];
+      }
+    })
+  }
+
+  createUniqueId() {
+    return Math.random().toString(36).substr(2, 9);
+  }
 }

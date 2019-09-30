@@ -5,4 +5,10 @@
   <app-card-item [cardItem]="card.cards" [isDone]="card.isDoneSection" [query]="searchCriterion"
     (removeCard)="handleRemove($event)">
   </app-card-item>
+  <mat-card-actions>
+    <button mat-button (click)="handleAddCard()">
+      <mat-icon color="primary">add</mat-icon>
+      Create a card
+    </button>
+  </mat-card-actions>
 </mat-card>

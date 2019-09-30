@@ -14,11 +14,19 @@ export class CardListComponent implements OnInit {
 
   @Output() public removeCard = new EventEmitter();
 
+  @Output() public addCard = new EventEmitter();
+
   constructor() {}
 
   ngOnInit() {}
 
   handleRemove($event) {
     this.removeCard.emit($event);
+  }
+
+  handleAddCard() {
+    console.log('hey')
+
+    this.addCard.emit(this.card);
   }
 }

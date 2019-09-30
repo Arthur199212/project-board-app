@@ -1,13 +1,9 @@
 .wrapper{
+  padding: 0 1rem;
   display: flex;
   flex-wrap: wrap;
-  padding: 0 1rem;
 
   app-card-list {
-    margin: 1rem;
-  }
-
-  app-card-list:last-child {
-    margin-bottom: 4.5rem;
+    margin: 1rem 1rem 4.5rem;
   }
 }
